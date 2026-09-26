@@ -1,0 +1,1 @@
+# SC_601_KN_Practica1
