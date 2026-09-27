@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<!-- START HOME -->
+<section id="home" class="home_bg"
+         style="background-image: url('/assets/img/bg/home-bg.jpg');
+    background-size: cover;
+    background-position: center center;">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-10 offset-lg-1 col-sm-12 col-xs-12 text-center">
+
+                <div class="hero-text">
+
+                    <h2>Hotel The Royalis</h2>
+
+                    <p>
+                        Elegancia, comodidad y hospitalidad en un solo lugar.
+                        Descubre una experiencia diseñada para hacer de tu estadía
+                        un momento inolvidable.
+                    </p>
+
+                    <div class="home_btn">
+
+                        <a href="#habitaciones"
+                           class="app-btn wow bounceIn page-scroll home_btn_color_one"
+                           data-wow-delay=".6s">
+                            Ver habitaciones
+                        </a>
+
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="app-btn wow bounceIn page-scroll home_btn_color_two"
+                           data-wow-delay=".8s">
+                            Iniciar sesión
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- END HOME -->
