@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@ViewData["Title"] - Hotel The Royalis</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/assets/owlcarousel/css/owl.theme.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/assets/css/fonts.css">
+    <link rel="stylesheet" href="~/assets/css/prettyPhoto.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/assets/css/slick.css">
+    <link rel="stylesheet" href="~/assets/css/menu.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <!-- Hotel The Royalis CSS -->
+    <link rel="stylesheet" href="~/css/royalis.css">
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="status">
+            <div class="status-mes"></div>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-6 col-xl-2">
+                    <h1 class="mb-0 site-logo">
+                        <a asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/img/logo-royalis.png"
+                                 alt="Hotel The Royalis">
+                        </a>
+                    </h1>
+                </div>
+
+                <div class="col-12 col-md-10 d-none d-xl-block">
+
+                    <nav class="site-navigation position-relative text-right"
+                         role="navigation">
+
+                        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+
+                            <li>
+                                <a asp-controller="Home"
+                                   asp-action="Index"
+                                   class="nav-link">
+                                    Inicio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#habitaciones"
+                                   class="nav-link">
+                                    Habitaciones
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#servicios"
+                                   class="nav-link">
+                                    Servicios
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#gallery"
+                                   class="nav-link">
+                                    Galería
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#contacto"
+                                   class="nav-link">
+                                    Contacto
+                                </a>
+                            </li>
+
+                            <li>
+                                <a asp-controller="Account"
+                                   asp-action="Login"
+                                   class="nav-link">
+                                    Iniciar sesión
+                                </a>
+                            </li>
+
+                            <li>
+                                <a asp-controller="Account"
+                                   asp-action="Registro"
+                                   class="nav-link">
+                                    Registrarse
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
+                     style="position: relative; top: 3px;">
+
+                    <a href="#"
+                       class="site-menu-toggle js-menu-toggle float-right">
+
+                        <span class="icon-menu h3"></span>
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO DE CADA VISTA -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-area" id="contacto">
+
+        <div class="container">
+
+            <div class="row footer-padding">
+
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+
+                    <div class="single_footer">
+
+                        <h4>Hotel The Royalis</h4>
+
+                        <div class="footer_contact">
+                            <p>
+                                Comodidad, elegancia y una experiencia
+                                diseñada para nuestros huéspedes.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+
+                    <div class="single_footer">
+
+                        <h4>Enlaces</h4>
+
+                        <div class="footer_contact">
+
+                            <ul>
+                                <li>
+                                    <a asp-controller="Home"
+                                       asp-action="Index">
+                                        Inicio
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#habitaciones">
+                                        Habitaciones
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#servicios">
+                                        Servicios
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#gallery">
+                                        Galería
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+
+                    <div class="single_footer">
+
+                        <h4>Cuenta</h4>
+
+                        <div class="footer_contact">
+
+                            <ul>
+                                <li>
+                                    <a asp-controller="Account"
+                                       asp-action="Login">
+                                        Iniciar sesión
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a asp-controller="Account"
+                                       asp-action="Registro">
+                                        Registrarse
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a asp-controller="Account"
+                                       asp-action="Recuperar">
+                                        Recuperar acceso
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row text-center">
+
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+
+                    <p class="footer_copyright">
+                        Hotel The Royalis &copy; @DateTime.Now.Year -
+                        Todos los derechos reservados.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="~/assets/js/jquery-1.12.4.min.js"></script>
+
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="~/assets/js/modernizr-2.8.3.min.js"></script>
+
+    <script src="~/assets/js/jquery.stellar.min.js"></script>
+
+    <script src="~/assets/js/menu.js"></script>
+
+    <script src="~/assets/js/jquery.sticky.js"></script>
+
+    <script src="~/assets/owlcarousel/js/owl.carousel.min.js"></script>
+
+    <script src="~/assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="~/assets/js/slick.min.js"></script>
+
+    <script src="~/assets/js/jquery.mixitup.js"></script>
+
+    <script src="~/assets/js/jquery.prettyPhoto.js"></script>
+
+    <script src="~/assets/js/scrolltopcontrol.js"></script>
+
+    <script src="~/assets/js/wow.min.js"></script>
+
+    <script src="~/assets/js/scripts.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

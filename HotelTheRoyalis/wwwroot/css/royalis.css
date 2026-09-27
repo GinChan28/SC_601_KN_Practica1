@@ -1,0 +1,229 @@
+﻿/* =========================================================
+   HOTEL THE ROYALIS
+   Personalización visual de la plantilla Hilux
+   ========================================================= */
+
+:root {
+    --royalis-gold: #F5A000;
+    --royalis-gold-hover: #D98C00;
+    --royalis-green: #4CAF32;
+    --royalis-green-hover: #3D9128;
+    --royalis-dark-green: #287A32;
+    --royalis-dark: #35445C;
+    --royalis-dark-deep: #263447;
+    --royalis-white: #FFFFFF;
+    --royalis-light: #F7F7F7;
+    --royalis-text: #333333;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.site-navbar {
+    transition: all 0.3s ease;
+}
+
+    /* Enlaces del menú */
+    .site-navbar .site-navigation .site-menu > li > a {
+        color: var(--royalis-white);
+        transition: color 0.3s ease;
+    }
+
+        /* Hover de los enlaces */
+        .site-navbar .site-navigation .site-menu > li > a:hover {
+            color: var(--royalis-gold);
+        }
+
+    /* Navbar al hacer scroll */
+    .site-navbar.scrolled {
+        background-color: var(--royalis-dark-deep);
+    }
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.site-logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+
+/* =========================================================
+   HERO / PÁGINA PRINCIPAL
+   ========================================================= */
+
+.hero-text h2 {
+    color: var(--royalis-white);
+    font-weight: 700;
+}
+
+.hero-text p {
+    color: var(--royalis-white);
+}
+
+
+/* =========================================================
+   BOTONES DEL HOME
+   ========================================================= */
+
+/* Botón Ver Habitaciones */
+#home .home_btn .home_btn_color_one {
+    background: var(--royalis-gold) !important;
+    background-color: var(--royalis-gold) !important;
+    border: 2px solid var(--royalis-gold) !important;
+    color: var(--royalis-white) !important;
+}
+
+    #home .home_btn .home_btn_color_one:hover {
+        background: var(--royalis-gold-hover) !important;
+        background-color: var(--royalis-gold-hover) !important;
+        border-color: var(--royalis-gold-hover) !important;
+        color: var(--royalis-white) !important;
+    }
+
+
+/* Botón Iniciar Sesión */
+#home .home_btn .home_btn_color_two {
+    background: var(--royalis-green) !important;
+    background-color: var(--royalis-green) !important;
+    border: 2px solid var(--royalis-green) !important;
+    color: var(--royalis-white) !important;
+}
+
+    #home .home_btn .home_btn_color_two:hover {
+        background: var(--royalis-green-hover) !important;
+        background-color: var(--royalis-green-hover) !important;
+        border-color: var(--royalis-green-hover) !important;
+        color: var(--royalis-white) !important;
+    }
+
+
+/* =========================================================
+   BOTONES GENERALES DEL PROYECTO
+   ========================================================= */
+
+.btn-royalis-primary {
+    background-color: var(--royalis-gold);
+    border-color: var(--royalis-gold);
+    color: var(--royalis-white);
+}
+
+    .btn-royalis-primary:hover {
+        background-color: var(--royalis-gold-hover);
+        border-color: var(--royalis-gold-hover);
+        color: var(--royalis-white);
+    }
+
+.btn-royalis-secondary {
+    background-color: var(--royalis-green);
+    border-color: var(--royalis-green);
+    color: var(--royalis-white);
+}
+
+    .btn-royalis-secondary:hover {
+        background-color: var(--royalis-green-hover);
+        border-color: var(--royalis-green-hover);
+        color: var(--royalis-white);
+    }
+
+
+/* =========================================================
+   TÍTULOS Y ACENTOS
+   ========================================================= */
+
+.royalis-title {
+    color: var(--royalis-dark-green);
+}
+
+.royalis-accent {
+    color: var(--royalis-gold);
+}
+
+
+/* =========================================================
+   FORMULARIOS
+   Login / Registro / Recuperar
+   ========================================================= */
+
+.form-control:focus {
+    border-color: var(--royalis-green);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 50, 0.20);
+}
+
+.form-check-input:checked {
+    background-color: var(--royalis-green);
+    border-color: var(--royalis-green);
+}
+
+
+/* =========================================================
+   ENLACES PERSONALIZADOS
+   ========================================================= */
+
+.royalis-link {
+    color: var(--royalis-green);
+    text-decoration: none;
+}
+
+    .royalis-link:hover {
+        color: var(--royalis-gold);
+    }
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-area {
+    background-color: var(--royalis-dark);
+}
+
+    .footer-area h4 {
+        color: var(--royalis-white) !important;
+    }
+
+    .footer-area p {
+        color: #D9DEE7 !important;
+    }
+
+    .footer-area .footer_contact p {
+        color: #D9DEE7 !important;
+    }
+
+    .footer-area a {
+        color: var(--royalis-white) !important;
+        transition: color 0.3s ease;
+    }
+
+        .footer-area a:hover {
+            color: var(--royalis-gold) !important;
+        }
+
+.footer_copyright {
+    color: #D9DEE7 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1199px) {
+    .site-logo img {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-logo img {
+        max-width: 85px;
+    }
+
+    .hero-text h2 {
+        font-size: 36px;
+    }
+}
