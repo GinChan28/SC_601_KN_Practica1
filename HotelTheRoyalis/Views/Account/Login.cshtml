@@ -2,9 +2,69 @@
     ViewData["Title"] = "Iniciar sesión";
 }
 
-<section class="section-padding">
+<section class="section-padding py-5">
     <div class="container">
-        <h2>Iniciar sesión</h2>
-        <p>Vista de inicio de sesión.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+
+                <div class="text-center mb-5">
+                    <h2 class="royalis-title">Iniciar sesión</h2>
+                    <p>Ingresa a tu cuenta de The Royalis</p>
+                </div>
+
+                <form>
+                    <div class="mb-4">
+                        <label for="email" class="form-label">
+                            Correo electrónico
+                        </label>
+
+                        <input type="email"
+                               class="form-control"
+                               id="email"
+                               name="email"
+                               placeholder="Ingresa tu correo electrónico">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">
+                            Contraseña
+                        </label>
+
+                        <input type="password"
+                               class="form-control"
+                               id="password"
+                               name="password"
+                               placeholder="Ingresa tu contraseña">
+                    </div>
+
+                    <div class="text-end mb-4">
+                        <a asp-controller="Account"
+                           asp-action="Recuperar"
+                           class="royalis-link">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit"
+                                class="btn btn-royalis-primary">
+                            Iniciar sesión
+                        </button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-5">
+                    <p>
+                        ¿No eres miembro de The Royalis?
+                        <a asp-controller="Account"
+                           asp-action="Registro"
+                           class="royalis-link">
+                            Regístrate
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
     </div>
 </section>
