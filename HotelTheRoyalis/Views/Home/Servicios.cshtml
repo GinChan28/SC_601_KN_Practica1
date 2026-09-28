@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Servicios";
+
+    var servicios = new List<(string Titulo, string Texto, string? Imagen)>
+    {
+        ("Wi-Fi gratuito", "Conexión de alta velocidad en todas las habitaciones y áreas comunes.", "wifi.jpg"),
+        ("Piscina", "Disfruta de nuestra piscina rodeada de jardines, ideal para descansar.", "pool.jpg"),
+        ("Restaurante", "Cocina local e internacional preparada con ingredientes frescos.", "food.jpg"),
+        ("Parqueo privado", "Estacionamiento seguro y sin costo adicional para nuestros huéspedes.", "parking.jpg"),
+        ("Servicio a la habitación", "Atención personalizada disponible para lo que necesites, cuando lo necesites.", "room.jpg"),
+        ("Seguridad 24/7", "Vigilancia y recepción abiertas todo el día para tu tranquilidad.", "security.jpg")
+    };
+}
+
+<section class="section-padding servicios-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="royalis-title">Nuestros Servicios</h2>
+            <p class="royalis-subtitle">
+                Todo lo que necesitas para que tu estadía sea cómoda, relajante e inolvidable.
+            </p>
+        </div>
+
+        <div class="row">
+            @foreach (var s in servicios)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-img">
+                <img src="~/assets/img/servicios/@(s.Imagen ?? "default.jpg")" alt="@s.Titulo" loading="lazy">
+                           </div>
+                        <div class="service-body">
+                            <h5>@s.Titulo</h5>
+                            <p>@s.Texto</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="text-center mt-4">
+            <a asp-controller="Home" asp-action="Habitaciones" class="btn btn-royalis-primary">
+                Ver Habitaciones
+            </a>
+        </div>
+
+    </div>
+</section>

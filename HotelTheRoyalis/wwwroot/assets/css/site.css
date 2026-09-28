@@ -1,0 +1,88 @@
+:root {
+    --royalis-orange: #f39c1f;
+    --royalis-green: #5aaa3c;
+    --royalis-dark: #3a4a6b;
+}
+
+.servicios-section {
+    padding: 90px 0;
+    background: #f7f8fa;
+}
+
+.royalis-title {
+    font-weight: 700;
+    color: var(--royalis-dark);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 14px;
+    margin-bottom: 1rem;
+}
+
+    .royalis-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: var(--royalis-orange);
+        border-radius: 2px;
+    }
+
+.royalis-subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6c757d;
+}
+
+.service-card {
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+    .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    }
+
+.service-img {
+    height: 210px;
+    overflow: hidden;
+}
+
+    .service-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .4s ease;
+    }
+
+.service-card:hover .service-img img {
+    transform: scale(1.07);
+}
+
+.service-body {
+    padding: 1.5rem;
+    border-bottom: 3px solid transparent;
+    transition: border-color .25s ease;
+}
+
+.service-card:hover .service-body {
+    border-bottom-color: var(--royalis-orange);
+}
+
+.service-body h5 {
+    font-weight: 600;
+    color: var(--royalis-dark);
+    margin-bottom: .6rem;
+}
+
+.service-body p {
+    margin: 0;
+    color: #6c757d;
+}
