@@ -1,9 +1,116 @@
+
 :root {
     --royalis-orange: #f39c1f;
     --royalis-green: #5aaa3c;
     --royalis-dark: #3a4a6b;
 }
 
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+.royalis-room-card {
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+    .royalis-room-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    }
+
+.royalis-room-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+    .royalis-room-img img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transition: transform .4s ease;
+    }
+
+.royalis-room-card:hover .royalis-room-img img {
+    transform: scale(1.07);
+}
+
+.royalis-room-price {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: var(--royalis-orange);
+    color: #fff;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .95rem;
+}
+
+    .royalis-room-price small {
+        font-weight: 400;
+        font-size: .75rem;
+    }
+
+.royalis-room-body {
+    padding: 1.5rem;
+}
+
+    .royalis-room-body h5 {
+        font-weight: 600;
+        color: #3a4a6b;
+        margin-bottom: .5rem;
+    }
+
+    .royalis-room-body p {
+        color: #6c757d;
+        margin-bottom: .8rem;
+    }
+
+.royalis-room-meta {
+    display: flex;
+    gap: 12px;
+    color: #6c757d;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+    .royalis-room-meta i {
+        color: var(--royalis-orange);
+        margin-right: 4px;
+    }
 .servicios-section {
     padding: 90px 0;
     background: #f7f8fa;

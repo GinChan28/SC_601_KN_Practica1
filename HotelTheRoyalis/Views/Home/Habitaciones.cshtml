@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Habitaciones";
+
+    var habitaciones = new List<(string Nombre, string Descripcion, string Precio, string Capacidad, string Imagen)>
+    {
+        ("Habitación Sencilla", "Ideal para viajeros solos, cómoda y funcional.", "45", "1 - 2 personas", "sencilla.jpg"),
+        ("Habitación Doble", "Amplia y luminosa, perfecta para parejas o amigos.", "65", "2 - 3 personas", "doble.jpg"),
+        ("Suite Junior", "Espacio adicional con sala de estar independiente.", "95", "2 - 4 personas", "suite-junior.jpg"),
+        ("Suite Presidencial", "Lujo y confort con vista panorámica y jacuzzi.", "180", "2 - 4 personas", "suite-presidencial.jpg"),
+        ("Habitación Familiar", "Pensada para familias, con espacio para todos.", "110", "4 - 6 personas", "familiar.jpg"),
+        ("Habitación Deluxe", "Decoración elegante y comodidades premium.", "85", "2 - 3 personas", "deluxe.jpg")
+    };
+}
+
+<section class="section-padding habitaciones-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="royalis-title">Nuestras Habitaciones</h2>
+            <p class="royalis-subtitle">
+                Elige el espacio perfecto para tu estadía, diseñado para tu comodidad.
+            </p>
+        </div>
+
+        <div class="row">
+            @foreach (var h in habitaciones)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="royalis-room-card">
+                        <div class="royalis-room-img">
+                            <img src="~/assets/img/habitaciones/@h.Imagen" alt="@h.Nombre" loading="lazy">
+                            <span class="royalis-room-price">$@h.Precio <small>/ noche</small></span>
+                        </div>
+                        <div class="royalis-room-body">
+                            <h5>@h.Nombre</h5>
+                            <p>@h.Descripcion</p>
+                            <div class="royalis-room-meta">
+                                <span><i class="ti-user"></i> @h.Capacidad</span>
+                            </div>
+                            <a asp-controller="Home" asp-action="Reservar" class="btn btn-royalis-primary btn-sm w-100">
+                                Reservar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>

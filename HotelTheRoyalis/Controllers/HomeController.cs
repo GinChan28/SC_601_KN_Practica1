@@ -21,6 +21,11 @@ namespace HotelTheRoyalis.Controllers
             return View();
         }
 
+        public IActionResult Habitaciones()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
