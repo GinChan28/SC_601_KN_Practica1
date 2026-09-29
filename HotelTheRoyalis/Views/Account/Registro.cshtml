@@ -2,9 +2,109 @@
     ViewData["Title"] = "Registro";
 }
 
-<section class="section-padding">
+<section class="section-padding py-5">
     <div class="container">
-        <h2>Registro de usuarios</h2>
-        <p>Vista de registro.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+
+                <div class="text-center mb-5">
+                    <h2 class="royalis-title">Registro de usuarios</h2>
+                    <p>Crea tu cuenta en The Royalis</p>
+                </div>
+
+                <form>
+
+                    <!-- Nombre completo -->
+                    <div class="mb-4">
+                        <label for="nombre" class="form-label">
+                            Nombre completo
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               id="nombre"
+                               name="nombre"
+                               placeholder="Ingresa tu nombre completo"
+                               required>
+                    </div>
+
+                    <!-- Correo electrónico -->
+                    <div class="mb-4">
+                        <label for="email" class="form-label">
+                            Correo electrónico
+                        </label>
+
+                        <input type="email"
+                               class="form-control"
+                               id="email"
+                               name="email"
+                               placeholder="Ingresa tu correo electrónico"
+                               required>
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="mb-4">
+                        <label for="password" class="form-label">
+                            Contraseña
+                        </label>
+
+                        <input type="password"
+                               class="form-control"
+                               id="password"
+                               name="password"
+                               placeholder="Ingresa tu contraseña"
+                               required>
+                    </div>
+
+                    <!-- Confirmar contraseña -->
+                    <div class="mb-4">
+                        <label for="confirmarPassword" class="form-label">
+                            Confirmar contraseña
+                        </label>
+
+                        <input type="password"
+                               class="form-control"
+                               id="confirmarPassword"
+                               name="confirmarPassword"
+                               placeholder="Confirma tu contraseña"
+                               required>
+                    </div>
+
+                    <!-- Términos y condiciones -->
+                    <div class="form-check mb-4">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="terminos"
+                               required>
+
+                        <label class="form-check-label" for="terminos">
+                            Acepto los términos y condiciones
+                        </label>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="d-grid">
+                        <button type="submit"
+                                class="btn btn-royalis-primary">
+                            Crear cuenta
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- Enlace a inicio de sesión -->
+                <div class="text-center mt-5">
+                    <p>
+                        ¿Ya tienes una cuenta?
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="royalis-link">
+                            Inicia sesión
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
     </div>
 </section>
